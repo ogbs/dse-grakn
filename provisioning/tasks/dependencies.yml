@@ -1,7 +1,7 @@
-- name: updating machine
+- name: Updating machine cache
   apt: update_cache=yes
 
-- name: installing dependencies
+- name: Installing dependencies
   apt: pkg={{ item }} state=installed update-cache=yes
   with_items:
   - curl

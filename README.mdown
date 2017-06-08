@@ -1,0 +1,51 @@
+# SDB POC Cassandra
+
+## Summary
+This is a simple Vagrant and Ansible setup that, when completed, should allow for pushbutton deployment of multi-instanced DSE clusters.
+
+As of 20170608, this playbook will set up 3 nodes on one oversized VM instance, in two different DCs. It provisions a VBox instance, that runs a shell provisioning script that installs and executes Ansible on the guest. This is a workaround to allow hosting this playbook on Windows.
+
+
+## Dependencies
+
+Install the following:
+1. Virtualbox
+2. Virtualbox guest additions
+3. Vagrant
+
+
+## Running this box
+
+1. Clone the repo
+2. `cd` into local folder
+3. `vagrant up` in shell to build. Estimated runtime will be 60', but will reduce to 30' once Ubuntu64 base box is on host.
+4. `vagrant ssh` to enter the vm.
+5. `vagrant destroy && y` to blow it up
+6. I believe there isn't a windows or desktop manager on this instance. If it is a requirement, you should change the base box to something with your needs.
+
+## Workflow
+
+The playbook does the following in accordance to `Multi-instance tutorial.md`:
+
+1. Grabs Ubuntu iso
+2. Starts it
+3. Bootstraps Ansible on this guest, running `./provisioning/playbook.yml` tasks
+4. Updates apt cache
+5. Installs dependencies
+6. Installs DSE
+7. Installs Java 8
+8. Defines and starts DSE nodes in
+9. Installs agent on each node
+10. Boots Opsmanager
+
+## TODO
+
+For this sprint, there is an issue with step 8 above that makes nodes unable to communicate with each other.
+
+See `TODO.md` for ideas for next sprint:
+
+1. Make enumerative configuration (e.g. adding hosts) Ansible friendly
+2. Span multiple VMs
+3. Add Graph, Search, Spark nodes
+4. Make yaml to define all of these options to make cluster configuration easy
+5. Integrate data load and ETL into this process.

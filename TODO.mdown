@@ -1,0 +1,32 @@
+# Playbook Automation Checklist
+
+## Sprint 1
+1. `Vagrant up` and get a base box **(DONE)**
+2. `Vagrant up` and pass all playbook checks **(DONE)**
+3. Playbook to define ulimits **(DONE)**
+4. Playbook to create IP aliases for cluster **(DONE)**
+    * TODO: Optimize this as enumerable list
+5. Playbook to define cluster **(DONE)**
+6. Playbook to define rackid **(deferred)**
+7. Playbook to define JMX ports **(DONE)**
+8. Playbook to start services **(DONE)**
+9. Playbook to install OpsCenter **(DONE)**
+10. Playbook to install Datastax Agent **(DONE)**
+    * TODO: Limit runtime of agent output
+
+## Sprint 2
+Find method to make everything definable along *k* nodes with *l* options. See:
+* https://gist.github.com/rothgar/8793800
+
+Find method to make yaml and `.sh` files configurable
+
+
+## Sprint 3
+1. Playbook to load batch (push flat files)
+2. Playbook to define Spark nodes
+3. Playbook to define DSE Search nodes
+4. Playbook to define DSE Graph nodes
+5. Playbook to define ETL process
+6. Playbook to define Mesos or DCOS integration
+7. Playbook to define Zeppelin or Jupyter integration
+8. Playbook to define distributed Tensorflow integration

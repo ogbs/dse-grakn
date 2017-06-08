@@ -1,11 +1,11 @@
----
-- hosts: dse-node
+- hosts: dse_master
   user: vagrant
   become: True
   tasks:
-
   - include: tasks/dependencies.yml
   - include: tasks/repositories.yml
   - include: tasks/java-install.yml
   - include: tasks/dse-install.yml
-#  - include: tasks/start-dse.yml
+  - include: tasks/cluster-define.yml
+  - include: tasks/agent-install.yml
+    
