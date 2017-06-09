@@ -12,6 +12,12 @@ Install the following:
 1. Virtualbox
 2. Virtualbox guest additions
 3. Vagrant
+4. Git for Windows (be sure to get git bash!)
+
+Be sure to also do this:
+1. Generate GPG public key
+    * `cd ~/ && ssh-keygen` on Linux and Mac
+    * Do the above in git bash on Windows
 
 
 ## Running this box
