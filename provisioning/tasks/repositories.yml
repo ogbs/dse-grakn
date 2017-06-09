@@ -2,7 +2,7 @@
   shell: add-apt-repository -y ppa:webupd8team/java
 
 - name: Adding DSE repo
-  shell: echo "deb http://datastaxrepo_gmail.com:utJVKEg4lKeaWTX@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
+  shell: echo "deb http://jonathan_reiter_mcafee.com:'1 Cool Dude'@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
 
 - name: Adding repo key
   apt_key: url=https://debian.datastax.com/debian/repo_key state=present validate_certs=no
