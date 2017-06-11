@@ -10,17 +10,17 @@
 - name: Install Node1 Agent
   shell: >
     cd /usr/share/datastax-agent/dse-node1 && 
-    sudo curl --user jonathan_reiter@mcafee.com:'1 Cool Dude' -L http://downloads.datastax.com/enterprise/datastax-agent-6.1.tar.gz | sudo tar xz
+    sudo curl --user jonathan_reiter@mcafee.com:1CoolDude -L http://downloads.datastax.com/enterprise/datastax-agent-6.1.tar.gz | sudo tar xz
 
 - name: Install Node2 Agent
   shell: >
     cd /usr/share/datastax-agent/dse-node2 && 
-    sudo curl --user jonathan_reiter@mcafee.com:'1 Cool Dude' -L http://downloads.datastax.com/enterprise/datastax-agent-6.1.tar.gz | sudo tar xz
+    sudo curl --user jonathan_reiter@mcafee.com:1CoolDude -L http://downloads.datastax.com/enterprise/datastax-agent-6.1.tar.gz | sudo tar xz
 
 - name: Install Node3 Agent
   shell: > 
     cd /usr/share/datastax-agent/dse-node3 && 
-    sudo curl --user jonathan_reiter@mcafee.com:'1 Cool Dude' -L http://downloads.datastax.com/enterprise/datastax-agent-6.1.tar.gz | sudo tar xz
+    sudo curl --user jonathan_reiter@mcafee.com:1CoolDude -L http://downloads.datastax.com/enterprise/datastax-agent-6.1.tar.gz | sudo tar xz
 
 - name: Configure Node1 Agent
   copy: 

@@ -1,3 +1,11 @@
 - name: Installing Datastax Enterprise
   apt: pkg=dse-full state=installed update-cache=yes
   register: dse
+
+- name: Set Vagrant ulimit
+  shell: |
+     sudo echo '
+     vagrant - memlock unlimited
+     vagrant - nofile 100000
+     vagrant - nproc 32768
+     vagrant - as unlimited' >> /etc/security/limits.d/cassandra.conf

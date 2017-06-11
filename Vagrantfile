@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "ubuntu/precise64"
-  config.vm.box_url = "https://atlas.hashicorp.com/ubuntu/boxes/precise64"
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.box_url = "https://atlas.hashicorp.com/ubuntu/boxes/trusty64"
   config.vm.define "dse-node"
   config.vm.hostname = "dse-node"
   config.vm.network "private_network", ip: "192.168.56.10"

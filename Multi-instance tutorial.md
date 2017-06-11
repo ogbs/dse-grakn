@@ -38,7 +38,7 @@ vagrant ssh dse-node
 
 
 ### Update ulimits
-You first need to update the ulimits so that your vargrant user (or whatever OS cassandra username you'll use) can start DSE.
+You first need to update the ulimits so that your vagrant user (or whatever OS cassandra username you'll use) can start DSE.
 There is a separate conf file to set ulimits for the cassandra user
 ```
 sudo vi /etc/security/limits.d/cassandra.conf
@@ -296,7 +296,6 @@ sudo nodetool -p 7299 gossipinfo
   HOST_ID:2:4a1985eb-075e-43da-8a9f-d13717d371ff
   RPC_READY:81:true
   TOKENS:19:<hidden>
-##Add Node 3##
 ```
 
 ## Add Node 3 - Standalone
