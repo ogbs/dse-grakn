@@ -9,3 +9,7 @@
   - libjna-java
   - sysstat
   - python-software-properties
+  - git
+  - maven
+  - nodejs
+  - npm

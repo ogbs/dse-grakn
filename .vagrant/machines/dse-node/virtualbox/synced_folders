@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/jreiter/Projects/Intern/DataStax-5.0-Multi-Instance-Demo","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/jreiter/foss/dse_grakn/dse-grakn","disabled":false,"__vagrantfile":true}}}

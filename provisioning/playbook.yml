@@ -8,4 +8,5 @@
   - include: tasks/dse-install.yml
   - include: tasks/cluster-define.yml
   - include: tasks/agent-install.yml
+  - include: tasks/grakn-install.yml
     

@@ -2,13 +2,15 @@
   shell: >
     sudo ifconfig lo:0 127.0.0.2 netmask 255.0.0.0 up && 
     sudo ifconfig lo:1 127.0.0.3 netmask 255.0.0.0 up && 
-    sudo ifconfig lo:2 127.0.0.4 netmask 255.0.0.0 up
+    sudo ifconfig lo:2 127.0.0.4 netmask 255.0.0.0 up &&
+    sudo ifconfig lo:3 127.0.0.5 netmask 255.0.0.0 up
 
 - name: Add hosts to hosts file
   shell: >
     sudo sed -i "2i127.0.0.2 node1 dse-node1" /etc/hosts && 
     sudo sed -i "2i127.0.0.3 node2 dse-node2" /etc/hosts && 
-    sudo sed -i "2i127.0.0.4 node3 dse-node3" /etc/hosts
+    sudo sed -i "2i127.0.0.4 node3 dse-node3" /etc/hosts &&
+    sudo sed -i "2i127.0.0.5 grakn grakn" /etc/hosts
 
 - name: Add nodes 
   shell: > 

@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "dse-node"
   config.vm.hostname = "dse-node"
   config.vm.network "private_network", ip: "192.168.56.10"
+  config.vm.network "forwarded_port", guest: 4567, host: 1337
   config.vm.boot_timeout = 30000
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 

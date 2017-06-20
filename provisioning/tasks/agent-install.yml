@@ -5,7 +5,10 @@
   shell: sudo service opscenterd start
 
 - name: Create Agent Folders
-  shell: sudo mkdir -p /usr/share/datastax-agent/dse-node1 && sudo mkdir -p /usr/share/datastax-agent/dse-node2 && sudo mkdir -p /usr/share/datastax-agent/dse-node3
+  shell: >
+    sudo mkdir -p /usr/share/datastax-agent/dse-node1 && 
+    sudo mkdir -p /usr/share/datastax-agent/dse-node2 && 
+    sudo mkdir -p /usr/share/datastax-agent/dse-node3
 
 - name: Install Node1 Agent
   shell: >
@@ -25,14 +28,14 @@
 - name: Configure Node1 Agent
   copy: 
     content: "stomp_interface: 127.0.0.1\nagent_rpc_interface: 127.0.0.2\njmx_port: 7299" 
-    dest: /usr/share/datastax-agent/dse-node1/datastax-agent-6.1.0/conf/address.yaml
+    dest: /usr/share/datastax-agent/dse-node1/datastax-agent-6.1.1/conf/address.yaml
 
 - name: Configure Node2 Agent
   copy: 
     content: "stomp_interface: 127.0.0.1\nagent_rpc_interface: 127.0.0.3\njmx_port: 7399" 
-    dest: /usr/share/datastax-agent/dse-node2/datastax-agent-6.1.0/conf/address.yaml
+    dest: /usr/share/datastax-agent/dse-node2/datastax-agent-6.1.1/conf/address.yaml
 
 - name: Configure Node3 Agent
   copy: 
     content: "stomp_interface: 127.0.0.1\nagent_rpc_interface: 127.0.0.4\njmx_port: 7499"
-    dest: /usr/share/datastax-agent/dse-node3/datastax-agent-6.1.0/conf/address.yaml
+    dest: /usr/share/datastax-agent/dse-node3/datastax-agent-6.1.1/conf/address.yaml
